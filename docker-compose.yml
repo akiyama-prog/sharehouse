@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:12.3
+    container_name: db
+    environment:
+      TZ: 'Asia/Tokyo'
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: 'sharehouse'
+      POSTGRES_DB: 'sharehouse'
+    ports:
+     - 5432:5432
+    volumes:
+     - ./docker/db:/var/lib/postgresql
+     - ./docker/db:/docker-entrypoint-initdb.d
+
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+      - ./www:/var/www:cached
+    ports:
+      - 8080:80
