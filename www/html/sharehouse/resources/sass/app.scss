@@ -1,1 +1,19 @@
-//
+$text-color:#585656;
+header{
+    width: 80%;
+    margin: 0 auto;
+    #logo{
+        a{
+            display: flex;
+            text-decoration: none;
+            color:$text-color;
+            &:hover{
+                color:#676666;
+            }
+        }
+        img{
+            width: 5rem;
+            height: auto;
+        }
+    }
+}
