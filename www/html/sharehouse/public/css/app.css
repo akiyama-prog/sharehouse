@@ -1,0 +1,20 @@
+header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header #logo a {
+  display: flex;
+  text-decoration: none;
+  color: #585656;
+}
+
+header #logo a:hover {
+  color: #676666;
+}
+
+header #logo img {
+  width: 5rem;
+  height: auto;
+}
+
