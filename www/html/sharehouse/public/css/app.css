@@ -45,3 +45,24 @@ header #logo img {
   background-size: cover;
 }
 
+.searches {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.searches .search {
+  opacity: 0.8;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: black;
+  background: white;
+  border-bottom: solid 6px white;
+  border-radius: 9px;
+}
+

@@ -26,7 +26,7 @@ class CreateRoomsTable extends Migration
             $table->text('facility')->nullable(); //部屋設備
             $table->string('utility_costs')->nullable(); //光熱費
             $table->boolean('is_vacancy')->nullable(); //空室?
-            $table->string('image')->nullable(); //空室?
+            $table->string('image')->nullable(); //写真
             $table->timestamps();
 
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');

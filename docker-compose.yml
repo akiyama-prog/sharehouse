@@ -6,7 +6,7 @@ services:
     container_name: db
     environment:
       TZ: 'Asia/Tokyo'
-      POSTGRES_USER: 'root'
+      POSTGRES_USER: 'akinayamada'
       POSTGRES_PASSWORD: 'sharehouse'
       POSTGRES_DB: 'sharehouse'
     ports:
