@@ -14,6 +14,7 @@
 <body>
     <header>@include('layouts.header')</header>
     <main>@yield('contents')</main>
+    <footer>@include('layouts.footer')</footer>
 </body>
 
 </html>

@@ -20,6 +20,9 @@ header{
         }
     }
 }
+#footer{
+    text-align: center;
+}
 .eyechach{
     position: relative;
 }
@@ -36,7 +39,7 @@ header{
 }
 .eyecatch-img{
     width: 100%;
-    height: 600px;
+    height: auto;
     opacity: .5;
     background-size: cover;
 }
