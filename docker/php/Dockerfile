@@ -11,6 +11,7 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 COPY ./docker/php/php.ini /etc
 
 RUN apt-get install -y --no-install-recommends \
+    libpq-dev \
     libzip-dev \
     libonig-dev \
     # for gd
@@ -29,7 +30,7 @@ RUN apt-get install -y --no-install-recommends \
     docker-php-ext-enable imagick && \
     docker-php-ext-install bcmath calendar exif gettext intl mbstring mysqli pdo pdo_mysql zip && \
     docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
-    docker-php-ext-install -j$(nproc) gd && \
+    docker-php-ext-install bcmath pgsql pdo_pgsql && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean && \
     # enable mod_rewrite
