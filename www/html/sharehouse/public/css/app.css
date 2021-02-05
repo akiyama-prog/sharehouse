@@ -32,7 +32,7 @@ header #logo img {
 
 .description {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -44,7 +44,11 @@ header #logo img {
 
 .eyecatch-img {
   width: 100%;
-  height: auto;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 80%;
+     object-position: 0 80%;
   opacity: 0.5;
   background-size: cover;
 }
@@ -53,12 +57,12 @@ header #logo img {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top: 80%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -30%);
   margin: 0;
   padding: 0;
-  width: 80%;
+  width: 90%;
 }
 
 .searches .search {
@@ -72,7 +76,7 @@ header #logo img {
   width: 100%;
 }
 
-.searches .search .area-select {
+.clear-button-css {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -81,5 +85,137 @@ header #logo img {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.feature-select {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-select li {
+  padding: 1rem 3rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem;
+  width: 15rem;
+}
+
+.feature-select li .icon-size {
+  font-size: 1.3em;
+}
+
+.feature-select .is-private-room {
+  border: #6ecc6e solid 2px;
+  color: #6ecc6e;
+}
+
+.feature-select .is-private-room input[type=submit] {
+  color: #6ecc6e;
+}
+
+.feature-select .is-private-room:hover {
+  background-color: #6ecc6e;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .is-private-room:hover input[type=submit] {
+  color: white;
+}
+
+.feature-select .is-domitory {
+  border: #6594eb solid 2px;
+  color: #6594eb;
+}
+
+.feature-select .is-domitory input[type=submit] {
+  color: #6594eb;
+}
+
+.feature-select .is-domitory:hover {
+  background-color: #6594eb;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .is-domitory:hover input[type=submit] {
+  color: white;
+}
+
+.feature-select .is-women-only {
+  border: #e04040 solid 2px;
+  color: #e04040;
+}
+
+.feature-select .is-women-only input[type=submit] {
+  color: #e04040;
+}
+
+.feature-select .is-women-only:hover {
+  background-color: #e04040;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .is-women-only:hover input[type=submit] {
+  color: white;
+}
+
+.feature-select .is-foreigner {
+  border: #e77777 solid 2px;
+  color: #e77777;
+}
+
+.feature-select .is-foreigner input[type=submit] {
+  color: #e77777;
+}
+
+.feature-select .is-foreigner:hover {
+  background-color: #e77777;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .is-foreigner:hover input[type=submit] {
+  color: white;
+}
+
+.feature-select .is_vacancy {
+  border: #77b5e7 solid 2px;
+  color: #77b5e7;
+}
+
+.feature-select .is_vacancy input[type=submit] {
+  color: #77b5e7;
+}
+
+.feature-select .is_vacancy:hover {
+  background-color: #77b5e7;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .is_vacancy:hover input[type=submit] {
+  color: white;
+}
+
+.feature-select .campaign {
+  border: #9577e7 solid 2px;
+  color: #9577e7;
+}
+
+.feature-select .campaign input[type=submit] {
+  color: #9577e7;
+}
+
+.feature-select .campaign:hover {
+  background-color: #9577e7;
+  color: white;
+  transition: all 0.3s;
+}
+
+.feature-select .campaign:hover input[type=submit] {
+  color: white;
 }
 

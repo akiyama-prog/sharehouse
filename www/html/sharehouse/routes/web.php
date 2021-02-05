@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PropertyController@index');
+
+Route::get('/search', 'PropertyController@index')->name('search');
