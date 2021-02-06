@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PropertyController@index');
+
+Route::get('/feature-search', 'PropertyController@featureSearch')->name('feature_search');
