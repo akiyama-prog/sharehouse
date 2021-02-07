@@ -21,7 +21,7 @@
                     <table class='table info-table'>
                         <tr>
                             <th>賃料</th>
-                            <td>/月</td>
+                            <td>￥{{ number_format(App\Model\Property::getMinLent($property)) }} ~ ￥{{ number_format(App\Model\Property::getMaxLent($property)) }}/月</td>
                         </tr>
                         <tr>
                             <th>アクセス</th>
