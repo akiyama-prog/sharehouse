@@ -1,4 +1,6 @@
 $text-color:#585656;
+$orange: #ffb32f;
+$red:#ff7275;
 body{
     width: 98%;
 }
@@ -14,6 +16,9 @@ header{
                 color:#676666;
             }
         }
+        h1{
+            margin-top: .5em;
+        }
         img{
             width: 5rem;
             height: auto;
@@ -23,6 +28,10 @@ header{
 #footer{
     text-align: center;
 }
+
+/*---------------
+トップページ
+-------------*/
 .eyechach{
     position: relative;
 }
@@ -66,7 +75,7 @@ header{
         width: 100%;
     }
 }
-.clear-button-css{
+.clear-button-css, button{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -119,13 +128,13 @@ header{
         }
     }
     .is-women-only{
-        border: rgb(224, 64, 64) solid 2px;
-        color: rgb(224, 64, 64);
+        border:$red solid 2px;
+        color:$red;
         input[type="submit"]{
-            color: rgb(224, 64, 64);
+            color:$red;
         }
         &:hover{
-            background-color:   rgb(224, 64, 64);
+            background-color:  $red;
             color: white;
             transition: all .3s;
             input[type="submit"]{
@@ -134,13 +143,13 @@ header{
         }
     }
     .is-foreigner{
-        border: rgb(231, 119, 119) solid 2px;
-        color:   rgb(231, 119, 119);
+        border: $orange solid 2px;
+        color: $orange;
         input[type="submit"]{
-            color:   rgb(231, 119, 119);
+            color: $orange;
         }
         &:hover{
-            background-color:  rgb(231, 119, 119);
+            background-color:  $orange;
             color: white;
             transition: all .3s;
             input[type="submit"]{
@@ -176,6 +185,75 @@ header{
             input[type="submit"]{
                 color:  white;
             }
+        }
+    }
+}
+/*--------
+検索結果ページ
+-----------*/
+#main-area{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+#side_content{
+    width: 30%;
+}
+#main_content{
+    width: 60%;
+    .search-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #f0f0f0 ;
+        border-top: 3px solid #856d53;
+        padding: 1rem;
+    }
+    .property{
+        border-top:  #856d53 dotted 2px;
+        margin-top: 1rem;
+        .property-name{
+            font-size: 1.2rem;
+            color: $text-color;
+            padding: 1rem;
+            font-weight: bold;
+            background: #fceeec;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .info-table,th{
+            border: 1px solid #dee2e6;
+            th{
+                text-align: center;
+                background: #4bb7d3;
+                color: white;
+            }
+        }
+    }
+    .property-info{
+        display: flex;
+        justify-content: space-between;
+        .property-img{
+            width: 40%;
+            height: auto;
+        }
+    }
+    .access-btn{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        a{
+            color: white;
+        }
+        .show-detail-btn,.query-btn{
+            width: 48%;
+            border-radius: .5rem;
+            padding: .6rem;
+        }
+        .show-detail-btn{
+            background: $orange;
+        }
+        .query-btn{
+            background: $red;
         }
     }
 }

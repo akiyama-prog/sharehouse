@@ -31,7 +31,7 @@
                 <li class='is-foreigner'><i class="fas fa-plane icon-size"></i>　
                     {!! Form::submit('外国人可',['class' => 'clear-button-css','name' => 'is_foreigner']) !!}</li>
                 <li class='is_vacancy'><i class="fas fa-sign-in-alt icon-size"></i>　
-                    {!! Form::submit('空室あり',['class' => 'clear-button-css','name' => 'is_animals']) !!}</li>
+                    {!! Form::submit('空室あり',['class' => 'clear-button-css','name' => 'is_vacancy']) !!}</li>
                 <li class='campaign'><i class="fas fa-glass-cheers icon-size"></i>　
                     {!! Form::submit('キャンペーンあり',['class' => 'clear-button-css','name' => 'campaign']) !!}</li>
             </ul>

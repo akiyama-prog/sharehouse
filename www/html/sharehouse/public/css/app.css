@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
   width: 98%;
 }
@@ -17,6 +19,10 @@ header #logo a:hover {
   color: #676666;
 }
 
+header #logo h1 {
+  margin-top: 0.5em;
+}
+
 header #logo img {
   width: 5rem;
   height: auto;
@@ -25,6 +31,10 @@ header #logo img {
 #footer {
   text-align: center;
 }
+
+/*---------------
+トップページ
+-------------*/
 
 .eyechach {
   position: relative;
@@ -76,7 +86,8 @@ header #logo img {
   width: 100%;
 }
 
-.clear-button-css {
+.clear-button-css,
+button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -144,16 +155,16 @@ header #logo img {
 }
 
 .feature-select .is-women-only {
-  border: #e04040 solid 2px;
-  color: #e04040;
+  border: #ff7275 solid 2px;
+  color: #ff7275;
 }
 
 .feature-select .is-women-only input[type=submit] {
-  color: #e04040;
+  color: #ff7275;
 }
 
 .feature-select .is-women-only:hover {
-  background-color: #e04040;
+  background-color: #ff7275;
   color: white;
   transition: all 0.3s;
 }
@@ -163,16 +174,16 @@ header #logo img {
 }
 
 .feature-select .is-foreigner {
-  border: #e77777 solid 2px;
-  color: #e77777;
+  border: #ffb32f solid 2px;
+  color: #ffb32f;
 }
 
 .feature-select .is-foreigner input[type=submit] {
-  color: #e77777;
+  color: #ffb32f;
 }
 
 .feature-select .is-foreigner:hover {
-  background-color: #e77777;
+  background-color: #ffb32f;
   color: white;
   transition: all 0.3s;
 }
@@ -217,5 +228,93 @@ header #logo img {
 
 .feature-select .campaign:hover input[type=submit] {
   color: white;
+}
+
+/*--------
+検索結果ページ
+-----------*/
+
+#main-area {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#side_content {
+  width: 30%;
+}
+
+#main_content {
+  width: 60%;
+}
+
+#main_content .search-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #f0f0f0;
+  border-top: 3px solid #856d53;
+  padding: 1rem;
+}
+
+#main_content .property {
+  border-top: #856d53 dotted 2px;
+  margin-top: 1rem;
+}
+
+#main_content .property .property-name {
+  font-size: 1.2rem;
+  color: #585656;
+  padding: 1rem;
+  font-weight: bold;
+  background: #fceeec;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+#main_content .property .info-table,
+#main_content .property th {
+  border: 1px solid #dee2e6;
+}
+
+#main_content .property .info-table th,
+#main_content .property th th {
+  text-align: center;
+  background: #4bb7d3;
+  color: white;
+}
+
+#main_content .property-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main_content .property-info .property-img {
+  width: 40%;
+  height: auto;
+}
+
+#main_content .access-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+#main_content .access-btn a {
+  color: white;
+}
+
+#main_content .access-btn .show-detail-btn,
+#main_content .access-btn .query-btn {
+  width: 48%;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+
+#main_content .access-btn .show-detail-btn {
+  background: #ffb32f;
+}
+
+#main_content .access-btn .query-btn {
+  background: #ff7275;
 }
 
