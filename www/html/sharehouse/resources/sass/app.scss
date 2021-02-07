@@ -1,4 +1,6 @@
 $text-color:#585656;
+$orange: #ffb32f;
+$red:#ff7275;
 body{
     width: 98%;
 }
@@ -73,7 +75,7 @@ header{
         width: 100%;
     }
 }
-.clear-button-css{
+.clear-button-css, button{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -126,13 +128,13 @@ header{
         }
     }
     .is-women-only{
-        border: rgb(224, 64, 64) solid 2px;
-        color: rgb(224, 64, 64);
+        border:$red solid 2px;
+        color:$red;
         input[type="submit"]{
-            color: rgb(224, 64, 64);
+            color:$red;
         }
         &:hover{
-            background-color:   rgb(224, 64, 64);
+            background-color:  $red;
             color: white;
             transition: all .3s;
             input[type="submit"]{
@@ -141,13 +143,13 @@ header{
         }
     }
     .is-foreigner{
-        border: rgb(231, 119, 119) solid 2px;
-        color:   rgb(231, 119, 119);
+        border: $orange solid 2px;
+        color: $orange;
         input[type="submit"]{
-            color:   rgb(231, 119, 119);
+            color: $orange;
         }
         &:hover{
-            background-color:  rgb(231, 119, 119);
+            background-color:  $orange;
             color: white;
             transition: all .3s;
             input[type="submit"]{
@@ -230,6 +232,25 @@ header{
         .property-img{
             width: 40%;
             height: auto;
+        }
+    }
+    .access-btn{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        a{
+            color: white;
+        }
+        .show-detail-btn,.query-btn{
+            width: 48%;
+            border-radius: .5rem;
+            padding: .6rem;
+        }
+        .show-detail-btn{
+            background: $orange;
+        }
+        .query-btn{
+            background: $red;
         }
     }
 }

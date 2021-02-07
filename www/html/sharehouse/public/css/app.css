@@ -86,7 +86,8 @@ header #logo img {
   width: 100%;
 }
 
-.clear-button-css {
+.clear-button-css,
+button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -154,16 +155,16 @@ header #logo img {
 }
 
 .feature-select .is-women-only {
-  border: #e04040 solid 2px;
-  color: #e04040;
+  border: #ff7275 solid 2px;
+  color: #ff7275;
 }
 
 .feature-select .is-women-only input[type=submit] {
-  color: #e04040;
+  color: #ff7275;
 }
 
 .feature-select .is-women-only:hover {
-  background-color: #e04040;
+  background-color: #ff7275;
   color: white;
   transition: all 0.3s;
 }
@@ -173,16 +174,16 @@ header #logo img {
 }
 
 .feature-select .is-foreigner {
-  border: #e77777 solid 2px;
-  color: #e77777;
+  border: #ffb32f solid 2px;
+  color: #ffb32f;
 }
 
 .feature-select .is-foreigner input[type=submit] {
-  color: #e77777;
+  color: #ffb32f;
 }
 
 .feature-select .is-foreigner:hover {
-  background-color: #e77777;
+  background-color: #ffb32f;
   color: white;
   transition: all 0.3s;
 }
@@ -287,5 +288,30 @@ header #logo img {
 #main_content .property-info .property-img {
   width: 40%;
   height: auto;
+}
+
+#main_content .access-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+#main_content .access-btn a {
+  color: white;
+}
+
+#main_content .access-btn .show-detail-btn,
+#main_content .access-btn .query-btn {
+  width: 48%;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+
+#main_content .access-btn .show-detail-btn {
+  background: #ffb32f;
+}
+
+#main_content .access-btn .query-btn {
+  background: #ff7275;
 }
 
