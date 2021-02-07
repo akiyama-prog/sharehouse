@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <th>空室</th>
-                            <td></td>
+                            <td>{{ App\Model\Property::countVacancyRooms($property) }}室</td>
                         </tr>
                     </table>
                 </div>

@@ -49,4 +49,13 @@ class Property extends Model
     {
         return $property->rooms()->max('lent');
     }
+
+    /**
+     * 空室数の数をカウント
+     * @param Property $property
+     */
+    public static function countVacancyRooms(Property $property)
+    {
+        return $property->rooms()->where('is_vacancy', true)->count();
+    }
 }
