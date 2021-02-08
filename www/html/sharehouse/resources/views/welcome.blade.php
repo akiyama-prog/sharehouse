@@ -9,11 +9,13 @@
         <div class='search'>
             <p>エリアで探す</p>
             <table class='table table-hover'>
+                {!! Form::open(['route' => 'area_search','method' => 'get']) !!}
                 @foreach($areas as $area)
                 <tr>
-                    <td>{!! Form::submit($area->area_name,['value' => $area->id,'class'=>'clear-button-css']) !!}</td>
+                    <td>{!! Form::submit($area->area_name,['class' => 'clear-button-css','name' => 'area']) !!}</td>
                 </tr>
                 @endforeach
+                {!! Form::close() !!}
             </table>
         </div>
         <div class='search'>

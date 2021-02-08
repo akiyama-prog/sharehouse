@@ -18,7 +18,20 @@ class PropertyController extends Controller
     }
 
     /**
-     * トップページからの検索
+     * トップページからのエリア検索
+     * @param Illuminate\Http\Requests
+     * @return response
+     */
+    public function areaSearch(Request $request)
+    {
+        $area_id = Area::where('area_name', $request->area)->value('id');
+        $properties = Property::where('area_id', $area_id)->get();
+        $feature = $request->area;
+        return view('property.search_result', compact('properties', 'feature'));
+    }
+
+    /**
+     * トップページからの特徴検索
      * @param Illuminate\Http\Requests
      * @return response
      */
