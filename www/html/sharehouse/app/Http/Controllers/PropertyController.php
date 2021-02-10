@@ -9,7 +9,7 @@ use App\Model\Property;
 class PropertyController extends Controller
 {
     /**
-     *
+     * @return View
      */
     public function index()
     {
@@ -20,7 +20,7 @@ class PropertyController extends Controller
     /**
      * トップページからのエリア検索
      * @param Illuminate\Http\Requests
-     * @return response
+     * @return View
      */
     public function areaSearch(Request $request)
     {
@@ -33,7 +33,7 @@ class PropertyController extends Controller
     /**
      * トップページからの特徴検索
      * @param Illuminate\Http\Requests
-     * @return response
+     * @return View
      */
     public function featureSearch(Request $request)
     {
@@ -57,5 +57,15 @@ class PropertyController extends Controller
             $feature = 'キャンペーン中';
         }
         return view('property.search_result', compact('properties', 'feature'));
+    }
+
+    /**
+     * 物件詳細ページ
+     * @param Property $property
+     * @return View
+     */
+    public function showProperty(Property $property)
+    {
+        return view('property.show', compact(('property')));
     }
 }

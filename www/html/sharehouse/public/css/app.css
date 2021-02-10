@@ -318,3 +318,18 @@ button {
   background: #ff7275;
 }
 
+/*--------
+物件詳細ページ
+-----------*/
+
+.main-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-info h1,
+.main-info .main-image {
+  text-align: center;
+  margin: 3rem 0;
+}
+

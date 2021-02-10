@@ -257,3 +257,14 @@ header{
         }
     }
 }
+/*--------
+物件詳細ページ
+-----------*/
+.main-info{
+    width: 80%;
+    margin: 0 auto;
+    h1, .main-image{
+        text-align: center;
+        margin: 3rem 0;
+    }
+}
