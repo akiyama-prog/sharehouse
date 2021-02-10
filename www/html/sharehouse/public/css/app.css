@@ -4,7 +4,8 @@ body {
   width: 98%;
 }
 
-header {
+header,
+#main-area {
   width: 80%;
   margin: 0 auto;
 }
@@ -236,8 +237,6 @@ button {
 
 #main-area {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
 }
 
 #side_content {
@@ -322,14 +321,53 @@ button {
 物件詳細ページ
 -----------*/
 
-.main-info {
-  width: 80%;
+#property-show {
+  width: 60%;
   margin: 0 auto;
+  color: #585656;
+  letter-spacing: 0.1rem;
 }
 
 .main-info h1,
 .main-info .main-image {
   text-align: center;
   margin: 3rem 0;
+}
+
+.inside-page-link {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.inside-page-link a {
+  color: #585656;
+  text-decoration: none;
+}
+
+.inside-page-link .jp {
+  font-size: 0.7rem;
+}
+
+.inside-page-link .fa-chevron-down {
+  font-size: 1.5rem;
+}
+
+.inside-page-link .facilities-arrow {
+  color: #E5B380;
+}
+
+.inside-page-link .rooms-arrow {
+  color: #9BC4C0;
+}
+
+.inside-page-link .location-arrow {
+  color: #E6A798;
+}
+
+.inside-page-link .oparation-arrow {
+  color: #B6B97E;
 }
 

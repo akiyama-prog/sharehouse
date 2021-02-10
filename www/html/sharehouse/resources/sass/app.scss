@@ -4,9 +4,11 @@ $red:#ff7275;
 body{
     width: 98%;
 }
-header{
+header,#main-area{
     width: 80%;
     margin: 0 auto;
+}
+header{
     #logo{
         a{
             display: flex;
@@ -193,8 +195,6 @@ header{
 -----------*/
 #main-area{
     display: flex;
-    width: 80%;
-    margin: 0 auto;
 }
 #side_content{
     width: 30%;
@@ -260,11 +260,45 @@ header{
 /*--------
 物件詳細ページ
 -----------*/
-.main-info{
-    width: 80%;
+#property-show{
+    width: 60%;
     margin: 0 auto;
+    color: $text-color;
+    letter-spacing: .1rem;
+}
+.main-info{
     h1, .main-image{
         text-align: center;
         margin: 3rem 0;
+    }
+}
+.inside-page-link{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+
+    a{
+        color: $text-color;
+        text-decoration: none;
+    }
+    .jp{
+        font-size: .7rem;
+    }
+    .fa-chevron-down{
+        font-size: 1.5rem;
+    }
+    .facilities-arrow{
+        color: #E5B380;;
+    }
+    .rooms-arrow{
+        color: #9BC4C0;
+    }
+    .location-arrow{
+        color: #E6A798;
+    }
+    .oparation-arrow{
+        color: #B6B97E;
     }
 }
