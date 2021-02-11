@@ -436,9 +436,19 @@ button {
   width: 60%;
 }
 
+.rooms {
+  font-weight: 600;
+}
+
+.rooms .icon {
+  font-size: 2.5rem;
+  color: #c6c3ba;
+}
+
 .rooms .rooms-title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .rooms .requirement {
@@ -451,8 +461,32 @@ button {
   margin: 0 1rem;
 }
 
-.rooms .requirement .icon {
-  font-size: 2.5rem;
+.rooms .number_of_vacancy {
+  color: #9BC4C0;
+  font-size: 1.5rem;
+}
+
+.rooms .total-room {
   color: #c6c3ba;
+}
+
+.rooms .index-room-table {
+  border-color: #eeede8;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.rooms .index-room-table th {
+  color: #585656;
+  background-color: #eeede8;
+  padding: 0.4rem;
+}
+
+.rooms .index-room-table td {
+  color: #585656;
+}
+
+.rooms .index-room-table .jp {
+  font-size: 0.9rem;
 }
 

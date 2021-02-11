@@ -360,9 +360,15 @@ header{
 }
 //占有部
 .rooms{
+    font-weight: 600;
+    .icon{
+        font-size: 2.5rem;
+        color: $show-main-color;
+    }
     .rooms-title{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 2rem;
     }
     .requirement{
         width: 60%;
@@ -371,9 +377,28 @@ header{
         p{
             margin: 0 1rem;
         }
-        .icon{
-            font-size: 2.5rem;
-            color: $show-main-color;
+    }
+    .number_of_vacancy{
+        color:  #9BC4C0;
+        font-size: 1.5rem;
+    }
+    .total-room{
+        color: $show-main-color;
+    }
+    .index-room-table{
+        border-color:  $show-border-color;
+        text-align: center;
+        margin-top: 2rem;
+        th{
+            color: $text-color;
+            background-color: $show-border-color;
+            padding: .4rem;
+        }
+        td{
+            color: $text-color;
+        }
+        .jp{
+            font-size: .9rem;
         }
     }
 }

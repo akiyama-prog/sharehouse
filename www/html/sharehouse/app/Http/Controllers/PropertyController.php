@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Area;
 use App\Model\Property;
+use App\Model\Room;
 
 class PropertyController extends Controller
 {
@@ -66,6 +67,7 @@ class PropertyController extends Controller
      */
     public function showProperty(Property $property)
     {
-        return view('property.show', compact(('property')));
+        $number_vacancy_rooms = Room::where('property_id', $property->id)->count();
+        return view('property.show', compact('property', 'number_vacancy_rooms'));
     }
 }

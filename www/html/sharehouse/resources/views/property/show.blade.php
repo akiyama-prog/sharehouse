@@ -20,10 +20,10 @@
         <a href="#rooms">
             <li>ROOMS</br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
-        <a href="">
+        <a href="#location">
             <li>LOCATION</br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
-        <a href="">
+        <a href="#oparation">
             <li>OPARATIOM</br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
     </ul>
@@ -122,6 +122,27 @@
                 @endif
             </div>
         </div>
+        @if($property->is_vacancy === true)
+        <p><i class="fas fa-door-closed icon"></i> 入居可能な個室　<span class='number_of_vacancy'>{{ $number_vacancy_rooms }}</span><span class='total-room'> / {{ $property->total_rooms }}</span></p>
+        <table class="table table-bordered index-room-table">
+            <tr>
+                <th>部屋</th>
+                <th>広さ</th>
+                <th>賃料</th>
+                <th>その他の費用</th>
+            </tr>
+            @foreach($property->rooms as $room)
+            <tr>
+                <td>{{ $room->room_number }}</td>
+                <td>{{ $room->room_size }}㎡<span class='jp'> {{ round($room->room_size / 1.62 ,1) }}畳</span></td>
+                <td>￥{{ $room->lent }}</td>
+                <td><span class='jp'>管理費</span> ￥{{ $room->management_fee }}<span class='jp'>　敷金・保証金</span> ￥{{ $room->security_deposit + $room->deposit }}</td>
+            </tr>
+            @endforeach
+        </table>
+        @else
+        <p>現在空室の予定はございません。</p>
+        @endif
     </div>
 
 </div>
