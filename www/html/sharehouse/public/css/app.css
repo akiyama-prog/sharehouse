@@ -328,6 +328,13 @@ button {
   letter-spacing: 0.1rem;
 }
 
+.main-info,
+.inside-page-link,
+.facilities {
+  border-bottom: #eeede8 3px solid;
+  padding: 3rem 0;
+}
+
 .main-info h1,
 .main-info .main-image {
   text-align: center;
@@ -355,19 +362,55 @@ button {
   font-size: 1.5rem;
 }
 
-.inside-page-link .facilities-arrow {
+.facilities-color {
   color: #E5B380;
 }
 
-.inside-page-link .rooms-arrow {
+.rooms-arrow {
   color: #9BC4C0;
 }
 
-.inside-page-link .location-arrow {
+.location-arrow {
   color: #E6A798;
 }
 
-.inside-page-link .oparation-arrow {
+.oparation-arrow {
   color: #B6B97E;
+}
+
+.facilities .facilities-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facilities .facilities-title .jp {
+  font-size: 1rem;
+  color: #c6c3ba;
+}
+
+.facilities .facilities-title .feature {
+  width: 60%;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #eeede8;
+  border-radius: 8px;
+}
+
+.facilities .facilities-title .feature li {
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+.facilities .facilities-title .featurue-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 30px;
+  padding: 0 9px;
+  line-height: 1;
+  color: #c6c3ba;
+  background: #FFF;
+  font-weight: bold;
 }
 

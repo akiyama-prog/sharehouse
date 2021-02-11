@@ -1,6 +1,8 @@
 $text-color:#585656;
 $orange: #ffb32f;
 $red:#ff7275;
+$show-main-color: #c6c3ba;
+$show-border-color: #eeede8;
 body{
     width: 98%;
 }
@@ -266,6 +268,10 @@ header{
     color: $text-color;
     letter-spacing: .1rem;
 }
+.main-info, .inside-page-link,.facilities{
+    border-bottom:$show-border-color 3px solid;
+    padding: 3rem 0;
+}
 .main-info{
     h1, .main-image{
         text-align: center;
@@ -278,7 +284,6 @@ header{
     list-style: none;
     text-align: center;
     font-weight: bold;
-
     a{
         color: $text-color;
         text-decoration: none;
@@ -289,16 +294,50 @@ header{
     .fa-chevron-down{
         font-size: 1.5rem;
     }
-    .facilities-arrow{
-        color: #E5B380;;
-    }
-    .rooms-arrow{
-        color: #9BC4C0;
-    }
-    .location-arrow{
-        color: #E6A798;
-    }
-    .oparation-arrow{
-        color: #B6B97E;
+}
+.facilities-color{
+    color: #E5B380;
+}
+.rooms-arrow{
+    color: #9BC4C0;
+}
+.location-arrow{
+    color: #E6A798;
+}
+.oparation-arrow{
+    color: #B6B97E;
+}
+//共用部
+.facilities{
+    .facilities-title{
+        display: flex;
+        justify-content: space-between;
+        .jp{
+            font-size: 1rem;
+            color: $show-main-color;
+        }
+        .feature{
+            width: 60%;
+            position: relative;
+            margin: 2em 0;
+            padding: 0.5em 1em;
+            border: solid 3px $show-border-color;
+            border-radius: 8px;
+            li{
+                margin: 1rem 2rem;
+                padding: 0 ;
+            }
+        }
+        .featurue-title{
+            position: absolute;
+            display: inline-block;
+            top: -13px;
+            left: 30px;
+            padding: 0 9px;
+            line-height: 1;
+            color:$show-main-color;
+            background: #FFF;
+            font-weight: bold;
+        }
     }
 }
