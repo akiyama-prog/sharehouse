@@ -17,14 +17,14 @@
         <a href="#facilities">
             <li>FACILITIES</br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
-        <a href="">
-            <li>ROOMS</br><span class='jp'>占有部</span></br><span class='rooms-arrow'><i class="fas fa-chevron-down"></i></span></li>
+        <a href="#rooms">
+            <li>ROOMS</br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="">
-            <li>LOCATION</br><span class='jp'>アクセス・環境</span></br><span class='location-arrow'><i class="fas fa-chevron-down"></i></span></li>
+            <li>LOCATION</br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="">
-            <li>OPARATIOM</br><span class='jp'>運営・管理</span></br><span class='oparation-arrow'><i class="fas fa-chevron-down"></i></span></li>
+            <li>OPARATIOM</br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
     </ul>
 
@@ -96,6 +96,30 @@
                         <td>{{ $property->parking_1 }}</td>
                     </tr>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div class='rooms'>
+        <div class='rooms-title'>
+            <a id='rooms'>
+                <h2><span class='rooms-color'>R</span>OOMS</br><span class='jp'>占有部</span></h2>
+            </a>
+            <div class='requirement'>
+                @if($property->is_women_only === true)
+                <p><i class="fas fa-female icon"></i></br>女性のみ</p>
+                @else
+
+                <p><i class="fas fa-restroom icon"></i></br>男性・女性OK</p>
+                @endif
+                @if($property->is_foreigner === true)
+
+                <p><i class="fas fa-plane icon"></i></br>外国人OK</p>
+                @endif
+                @if($property->is_animals === true)
+
+                <p><i class="fas fa-paw icon"></i></br>ペットOK</p>
+                @endif
             </div>
         </div>
     </div>

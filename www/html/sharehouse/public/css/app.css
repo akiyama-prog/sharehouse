@@ -321,6 +321,11 @@ button {
 物件詳細ページ
 -----------*/
 
+.jp {
+  font-size: 1rem;
+  color: #c6c3ba;
+}
+
 #property-show {
   width: 60%;
   margin: 0 auto;
@@ -330,7 +335,8 @@ button {
 
 .main-info,
 .inside-page-link,
-.facilities {
+.facilities,
+.rooms {
   border-bottom: #eeede8 3px solid;
   padding: 3rem 0;
 }
@@ -356,6 +362,7 @@ button {
 
 .inside-page-link .jp {
   font-size: 0.7rem;
+  color: #585656;
 }
 
 .inside-page-link .fa-chevron-down {
@@ -366,26 +373,21 @@ button {
   color: #E5B380;
 }
 
-.rooms-arrow {
+.rooms-color {
   color: #9BC4C0;
 }
 
-.location-arrow {
+.location-color {
   color: #E6A798;
 }
 
-.oparation-arrow {
+.oparation-color {
   color: #B6B97E;
 }
 
 .facilities .facilities-title {
   display: flex;
   justify-content: space-between;
-}
-
-.facilities .facilities-title .jp {
-  font-size: 1rem;
-  color: #c6c3ba;
 }
 
 .facilities .facilities-title .feature {
@@ -432,5 +434,25 @@ button {
 
 .facilities .facilities-info .facilities-info-table {
   width: 60%;
+}
+
+.rooms .rooms-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooms .requirement {
+  width: 60%;
+  display: flex;
+  text-align: center;
+}
+
+.rooms .requirement p {
+  margin: 0 1rem;
+}
+
+.rooms .requirement .icon {
+  font-size: 2.5rem;
+  color: #c6c3ba;
 }
 

@@ -262,13 +262,17 @@ header{
 /*--------
 物件詳細ページ
 -----------*/
+.jp{
+    font-size: 1rem;
+    color: $show-main-color;
+}
 #property-show{
     width: 60%;
     margin: 0 auto;
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities{
+.main-info, .inside-page-link,.facilities, .rooms{
     border-bottom:$show-border-color 3px solid;
     padding: 3rem 0;
 }
@@ -290,6 +294,7 @@ header{
     }
     .jp{
         font-size: .7rem;
+        color: $text-color;
     }
     .fa-chevron-down{
         font-size: 1.5rem;
@@ -298,13 +303,13 @@ header{
 .facilities-color{
     color: #E5B380;
 }
-.rooms-arrow{
+.rooms-color{
     color: #9BC4C0;
 }
-.location-arrow{
+.location-color{
     color: #E6A798;
 }
-.oparation-arrow{
+.oparation-color{
     color: #B6B97E;
 }
 //共用部
@@ -312,10 +317,6 @@ header{
     .facilities-title{
         display: flex;
         justify-content: space-between;
-        .jp{
-            font-size: 1rem;
-            color: $show-main-color;
-        }
         .feature{
             width: 60%;
             position: relative;
@@ -354,6 +355,25 @@ header{
         }
         .facilities-info-table{
             width: 60%;
+        }
+    }
+}
+//占有部
+.rooms{
+    .rooms-title{
+        display: flex;
+        justify-content: space-between;
+    }
+    .requirement{
+        width: 60%;
+        display: flex;
+        text-align: center;
+        p{
+            margin: 0 1rem;
+        }
+        .icon{
+            font-size: 2.5rem;
+            color: $show-main-color;
         }
     }
 }
