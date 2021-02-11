@@ -41,7 +41,7 @@ header{
 }
 .description{
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     margin:0;
@@ -62,7 +62,7 @@ header{
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-30%);
     margin:0;
@@ -338,6 +338,22 @@ header{
             color:$show-main-color;
             background: #FFF;
             font-weight: bold;
+        }
+    }
+    .facilities-info{
+        display: flex;
+        justify-content: space-between;
+        .images{
+            width: 30%;
+            flex-wrap: wrap;
+            .subpics{
+                margin-top: .5rem;
+                width: 95px;
+                height: 80px;
+            }
+        }
+        .facilities-info-table{
+            width: 60%;
         }
     }
 }

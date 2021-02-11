@@ -43,7 +43,7 @@ header #logo img {
 
 .description {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -68,7 +68,7 @@ header #logo img {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
   margin: 0;
@@ -412,5 +412,25 @@ button {
   color: #c6c3ba;
   background: #FFF;
   font-weight: bold;
+}
+
+.facilities .facilities-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facilities .facilities-info .images {
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+.facilities .facilities-info .images .subpics {
+  margin-top: 0.5rem;
+  width: 95px;
+  height: 80px;
+}
+
+.facilities .facilities-info .facilities-info-table {
+  width: 60%;
 }
 

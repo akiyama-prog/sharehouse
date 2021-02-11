@@ -10,6 +10,7 @@
         東京share|
         @yield('title')
     </title>
+    @yield('header')
 </head>
 
 <body>
