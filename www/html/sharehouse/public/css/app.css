@@ -336,7 +336,8 @@ button {
 .main-info,
 .inside-page-link,
 .facilities,
-.rooms {
+.rooms,
+.location {
   border-bottom: #eeede8 3px solid;
   padding: 3rem 0;
 }
@@ -487,6 +488,46 @@ button {
 }
 
 .rooms .index-room-table .jp {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.location-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-title .station-walk {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+
+.location-title .station-walk .icon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #c6c3ba;
+}
+
+.location-title .station-walk .station {
+  display: flex;
+}
+
+.location-title .station-walk .route1 {
+  font-size: 0.8rem;
+}
+
+.location-title .station-walk .shoe-print {
+  display: inline-block;
+  transform: scaleX(-1);
+  font-size: 1.5rem;
+}
+
+.location-title .station-walk .walk_min {
+  font-weight: bold;
+}
+
+.location-title .station-walk .walk_min .minutes {
+  color: #E6A798;
+  font-size: 1.5rem;
 }
 

@@ -272,7 +272,7 @@ header{
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities, .rooms{
+.main-info, .inside-page-link,.facilities, .rooms,.location{
     border-bottom:$show-border-color 3px solid;
     padding: 3rem 0;
 }
@@ -398,7 +398,40 @@ header{
             color: $text-color;
         }
         .jp{
-            font-size: .9rem;
+            font-size: .8rem;
+        }
+    }
+}
+//アクセス
+.location-title{
+    display: flex;
+    justify-content: space-between;
+    .station-walk{
+        display: flex;
+        width: 60%;
+        align-items: center;
+        .icon{
+            font-size: 2rem;
+            margin: 0 1rem;
+            color: $show-main-color;
+        }
+        .station{
+            display: flex;
+        }
+        .route1{
+            font-size: .8rem;
+        }
+        .shoe-print{
+            display: inline-block;
+            transform: scaleX(-1);
+            font-size: 1.5rem;
+        }
+        .walk_min{
+            font-weight: bold;
+            .minutes{
+                color:  #E6A798;
+                font-size: 1.5rem;
+            }
         }
     }
 }

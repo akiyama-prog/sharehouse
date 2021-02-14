@@ -145,5 +145,31 @@
         @endif
     </div>
 
+    <div class='location'>
+        <div class='location-title'>
+            <a id='location'>
+                <h2><span class='location-color'>L</span>ATION</br><span class='jp'>アクセス・地域環境</span></h2>
+            </a>
+            <div class='station-walk'>
+                <div class='station'>
+                    <div><span class='route1'>{{ $property->route1 }}</span></br>{{ $property->station1 }}</div>
+                    <span class='icon'><i class="fas fa-subway"></i></span>
+                </div>
+                <div class='shoe-print icon'><i class="fas fa-shoe-prints"></i>　<i class="fas fa-shoe-prints"></i></div>
+                <div class='walk_min'><span class='icon'><i class="fas fa-home"></span></i>徒歩<span class='minutes'>{{ $property->station_walk1 }}</span>分</div>
+            </div>
+            @if($property->route2)
+            <div class='station-walk'>
+                <div class='station'>
+                    <div><span class='route1'>{{ $property->route1 }}</span></br>{{ $property->station1 }}</div>
+                    <span class='icon'><i class="fas fa-subway"></i></span>
+                </div>
+                <div class='shoe-print icon'><i class="fas fa-shoe-prints"></i>　<i class="fas fa-shoe-prints"></i></div>
+                <div class='walk_min'><span class='icon'><i class="fas fa-home"></span></i>徒歩<span class='minutes'>{{ $property->station_walk1 }}</span>分</div>
+            </div>
+            @endif
+        </div>
+    </div>
+
 </div>
 @endsection
