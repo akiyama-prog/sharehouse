@@ -1,12 +1,19 @@
 $text-color:#585656;
 $orange: #ffb32f;
 $red:#ff7275;
+$show-main-color:#a49e90;
+$show-border-color: #eeede8;
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 98%;
 }
-header{
+header,#main-area{
     width: 80%;
     margin: 0 auto;
+}
+header{
     #logo{
         a{
             display: flex;
@@ -37,7 +44,7 @@ header{
 }
 .description{
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     margin:0;
@@ -58,7 +65,7 @@ header{
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-30%);
     margin:0;
@@ -193,8 +200,6 @@ header{
 -----------*/
 #main-area{
     display: flex;
-    width: 80%;
-    margin: 0 auto;
 }
 #side_content{
     width: 30%;
@@ -254,6 +259,234 @@ header{
         }
         .query-btn{
             background: $red;
+        }
+    }
+}
+/*--------
+物件詳細ページ
+-----------*/
+.jp{
+    font-size: 1rem;
+    color: $show-main-color;
+}
+#property-show{
+    width: 60%;
+    margin: 0 auto;
+    color: $text-color;
+    letter-spacing: .1rem;
+}
+.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+    border-bottom:$show-border-color 3px solid;
+    padding: 3rem 0;
+}
+.main-info{
+    h1, .main-image{
+        text-align: center;
+        margin: 3rem 0;
+    }
+}
+.inside-page-link{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    a{
+        color: $text-color;
+        text-decoration: none;
+    }
+    .jp{
+        font-size: .7rem;
+        color: $text-color;
+    }
+    .fa-chevron-down{
+        font-size: 1.5rem;
+    }
+}
+.facilities-color{
+    color: #E5B380;
+}
+.rooms-color{
+    color: #9BC4C0;
+}
+.location-color{
+    color: #E6A798;
+}
+.oparation-color{
+    color: #B6B97E;
+}
+.feature ,.area-info{
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px $show-border-color;
+    border-radius: 9px;
+    .info-title{
+        position: absolute;
+        display: inline-block;
+        top: -10px;
+        left: 30px;
+        padding: 0 9px;
+        line-height: 1;
+        color:$show-main-color;
+        background: #FFF;
+        font-weight: bold;
+    }
+    li{
+        margin: 1rem 2rem;
+        padding: 0 ;
+    }
+}
+
+//共用部
+.facilities{
+    .facilities-title{
+        display: flex;
+        justify-content: space-between;
+        .feature{
+            width: 60%;
+        }
+    }
+    .facilities-info{
+        display: flex;
+        justify-content: space-between;
+        .images{
+            width: 30%;
+            flex-wrap: wrap;
+            .subpics{
+                margin-top: .5rem;
+                width: 95px;
+                height: 80px;
+            }
+        }
+        .facilities-info-table{
+            width: 60%;
+        }
+    }
+}
+//占有部
+.rooms{
+    font-weight: 600;
+    .icon{
+        font-size: 2.5rem;
+        color: $show-main-color;
+    }
+    .rooms-title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .requirement{
+        width: 60%;
+        display: flex;
+        text-align: center;
+        p{
+            margin: 0 1rem;
+        }
+    }
+    .number_of_vacancy{
+        color:  #9BC4C0;
+        font-size: 1.5rem;
+    }
+    .total-room{
+        color: $show-main-color;
+    }
+    .index-room-table{
+        border-color:  $show-border-color;
+        text-align: center;
+        margin-top: 2rem;
+        th{
+            color: $text-color;
+            background-color: $show-border-color;
+            padding: .4rem;
+        }
+        td{
+            color: $text-color;
+        }
+        .jp{
+            font-size: .8rem;
+        }
+    }
+}
+//アクセス
+.location-title{
+    display: flex;
+    justify-content: space-between;
+    .station-walk{
+        display: flex;
+        width: 60%;
+        align-items: center;
+        .icon{
+            font-size: 2rem;
+            margin: 0 1rem;
+            color: $show-main-color;
+        }
+        .station{
+            display: flex;
+        }
+        .route1{
+            font-size: .8rem;
+        }
+        .shoe-print{
+            display: inline-block;
+            transform: scaleX(-1);
+            font-size: 1.5rem;
+        }
+        .walk_min{
+            font-weight: bold;
+            .minutes{
+                color:  #E6A798;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.area-info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    li{
+        font-weight: bold;
+        .area-info-walk{
+            font-size: .8rem;
+        }
+    }
+}
+//運営管理
+.oparation-list{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    .genre{
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    .capture{
+        font-size: .8rem;
+    }
+    .icon{
+        font-size: 3.5rem;
+        color: $show-main-color;
+    }
+}
+//問合せ
+.artical-info{
+    text-align: center;
+    font-weight: bold;
+    .inquiry{
+        background-color: #F59A89;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 9px;
+    }
+    .jump-to-top{
+        margin-top: 3rem;
+        a{
+            color: $show-main-color;
+            text-decoration: none;
+            font-size: .8rem;
         }
     }
 }

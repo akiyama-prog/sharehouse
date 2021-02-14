@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Area;
 use App\Model\Property;
+use App\Model\Room;
 
 class PropertyController extends Controller
 {
     /**
-     *
+     * @return View
      */
     public function index()
     {
@@ -20,7 +21,7 @@ class PropertyController extends Controller
     /**
      * トップページからのエリア検索
      * @param Illuminate\Http\Requests
-     * @return response
+     * @return View
      */
     public function areaSearch(Request $request)
     {
@@ -33,7 +34,7 @@ class PropertyController extends Controller
     /**
      * トップページからの特徴検索
      * @param Illuminate\Http\Requests
-     * @return response
+     * @return View
      */
     public function featureSearch(Request $request)
     {
@@ -57,5 +58,16 @@ class PropertyController extends Controller
             $feature = 'キャンペーン中';
         }
         return view('property.search_result', compact('properties', 'feature'));
+    }
+
+    /**
+     * 物件詳細ページ
+     * @param Property $property
+     * @return View
+     */
+    public function showProperty(Property $property)
+    {
+        $number_vacancy_rooms = Room::where('property_id', $property->id)->count();
+        return view('property.show', compact('property', 'number_vacancy_rooms'));
     }
 }

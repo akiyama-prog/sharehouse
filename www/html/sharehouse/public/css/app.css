@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 98%;
 }
 
-header {
+header,
+#main-area {
   width: 80%;
   margin: 0 auto;
 }
@@ -42,7 +47,7 @@ header #logo img {
 
 .description {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -67,7 +72,7 @@ header #logo img {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
   margin: 0;
@@ -236,8 +241,6 @@ button {
 
 #main-area {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
 }
 
 #side_content {
@@ -316,5 +319,285 @@ button {
 
 #main_content .access-btn .query-btn {
   background: #ff7275;
+}
+
+/*--------
+物件詳細ページ
+-----------*/
+
+.jp {
+  font-size: 1rem;
+  color: #a49e90;
+}
+
+#property-show {
+  width: 60%;
+  margin: 0 auto;
+  color: #585656;
+  letter-spacing: 0.1rem;
+}
+
+.main-info,
+.inside-page-link,
+.facilities,
+.rooms,
+.location,
+.oparation,
+.artical-info {
+  border-bottom: #eeede8 3px solid;
+  padding: 3rem 0;
+}
+
+.main-info h1,
+.main-info .main-image {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.inside-page-link {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.inside-page-link a {
+  color: #585656;
+  text-decoration: none;
+}
+
+.inside-page-link .jp {
+  font-size: 0.7rem;
+  color: #585656;
+}
+
+.inside-page-link .fa-chevron-down {
+  font-size: 1.5rem;
+}
+
+.facilities-color {
+  color: #E5B380;
+}
+
+.rooms-color {
+  color: #9BC4C0;
+}
+
+.location-color {
+  color: #E6A798;
+}
+
+.oparation-color {
+  color: #B6B97E;
+}
+
+.feature,
+.area-info {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #eeede8;
+  border-radius: 9px;
+}
+
+.feature .info-title,
+.area-info .info-title {
+  position: absolute;
+  display: inline-block;
+  top: -10px;
+  left: 30px;
+  padding: 0 9px;
+  line-height: 1;
+  color: #a49e90;
+  background: #FFF;
+  font-weight: bold;
+}
+
+.feature li,
+.area-info li {
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+.facilities .facilities-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facilities .facilities-title .feature {
+  width: 60%;
+}
+
+.facilities .facilities-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facilities .facilities-info .images {
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+.facilities .facilities-info .images .subpics {
+  margin-top: 0.5rem;
+  width: 95px;
+  height: 80px;
+}
+
+.facilities .facilities-info .facilities-info-table {
+  width: 60%;
+}
+
+.rooms {
+  font-weight: 600;
+}
+
+.rooms .icon {
+  font-size: 2.5rem;
+  color: #a49e90;
+}
+
+.rooms .rooms-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.rooms .requirement {
+  width: 60%;
+  display: flex;
+  text-align: center;
+}
+
+.rooms .requirement p {
+  margin: 0 1rem;
+}
+
+.rooms .number_of_vacancy {
+  color: #9BC4C0;
+  font-size: 1.5rem;
+}
+
+.rooms .total-room {
+  color: #a49e90;
+}
+
+.rooms .index-room-table {
+  border-color: #eeede8;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.rooms .index-room-table th {
+  color: #585656;
+  background-color: #eeede8;
+  padding: 0.4rem;
+}
+
+.rooms .index-room-table td {
+  color: #585656;
+}
+
+.rooms .index-room-table .jp {
+  font-size: 0.8rem;
+}
+
+.location-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-title .station-walk {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+
+.location-title .station-walk .icon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #a49e90;
+}
+
+.location-title .station-walk .station {
+  display: flex;
+}
+
+.location-title .station-walk .route1 {
+  font-size: 0.8rem;
+}
+
+.location-title .station-walk .shoe-print {
+  display: inline-block;
+  transform: scaleX(-1);
+  font-size: 1.5rem;
+}
+
+.location-title .station-walk .walk_min {
+  font-weight: bold;
+}
+
+.location-title .station-walk .walk_min .minutes {
+  color: #E6A798;
+  font-size: 1.5rem;
+}
+
+.area-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.area-info li {
+  font-weight: bold;
+}
+
+.area-info li .area-info-walk {
+  font-size: 0.8rem;
+}
+
+.oparation-list {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.oparation-list .genre {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.oparation-list .capture {
+  font-size: 0.8rem;
+}
+
+.oparation-list .icon {
+  font-size: 3.5rem;
+  color: #a49e90;
+}
+
+.artical-info {
+  text-align: center;
+  font-weight: bold;
+}
+
+.artical-info .inquiry {
+  background-color: #F59A89;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 9px;
+}
+
+.artical-info .jump-to-top {
+  margin-top: 3rem;
+}
+
+.artical-info .jump-to-top a {
+  color: #a49e90;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 
