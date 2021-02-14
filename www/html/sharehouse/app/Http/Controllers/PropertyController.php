@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Area;
 use App\Model\Property;
 use App\Model\Room;
+use phpDocumentor\Reflection\Types\Integer;
 
 class PropertyController extends Controller
 {
@@ -20,14 +21,13 @@ class PropertyController extends Controller
 
     /**
      * トップページからのエリア検索
-     * @param Illuminate\Http\Requests
+     * @param App\Model\Area $area
      * @return View
      */
-    public function areaSearch(Request $request)
+    public function areaSearch(Area $area)
     {
-        $area_id = Area::where('area_name', $request->area)->value('id');
-        $properties = Property::where('area_id', $area_id)->get();
-        $feature = $request->area;
+        $properties = Property::where('area_id', $area->id)->get();
+        $feature = $area->area_name;
         return view('property.search_result', compact('properties', 'feature'));
     }
 

@@ -103,6 +103,16 @@ button {
           appearance: none;
 }
 
+.area-select {
+  display: block;
+  color: black;
+}
+
+.area-select:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .feature-select {
   list-style: none;
   padding-left: 0;
