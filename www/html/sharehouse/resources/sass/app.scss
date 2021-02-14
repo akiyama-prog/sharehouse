@@ -1,7 +1,7 @@
 $text-color:#585656;
 $orange: #ffb32f;
 $red:#ff7275;
-$show-main-color: #c6c3ba;
+$show-main-color:#a49e90;
 $show-border-color: #eeede8;
 body{
     width: 98%;
@@ -272,7 +272,7 @@ header{
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation{
+.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
     border-bottom:$show-border-color 3px solid;
     padding: 3rem 0;
 }
@@ -317,7 +317,7 @@ header{
     margin: 2em 0;
     padding: 0.5em 1em;
     border: solid 3px $show-border-color;
-    border-radius: 8px;
+    border-radius: 9px;
     .info-title{
         position: absolute;
         display: inline-block;
@@ -465,5 +465,23 @@ header{
     .icon{
         font-size: 3.5rem;
         color: $show-main-color;
+    }
+}
+//問合せ
+.artical-info{
+    text-align: center;
+    .inquiry{
+        background-color: #F59A89;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 9px;
+    }
+    .jump-to-top{
+        margin-top: 3rem;
+        a{
+            color: $show-main-color;
+            text-decoration: none;
+        }
     }
 }

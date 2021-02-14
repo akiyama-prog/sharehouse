@@ -188,13 +188,17 @@
                 <p>{{ $property->clean_style }}({{ $property->clean_frequency }})</p>
             </div>
             <div>
-                <i class="far fa-circle icon"></i><i class="fas fa-times-circle icon"></i>
+                <i class="fas fa-dot-circle icon"></i><i class="fas fa-times-circle icon"></i>
                 <p class='genre'>ルール</p>
                 <p>{{ $property->rule1 }}。
                     @if($property->rule2){{ $property->rule2}}。@endif
                 </p>
             </div>
         </div>
+    </div>
+    <div class='artical-info'>
+        <div><a href="" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
+        <div class='jump-to-top'><a href="#property-show"><i class="fas fa-chevron-up"></i></br>ページ先頭へ戻る</a></div>
     </div>
 </div>
 @endsection

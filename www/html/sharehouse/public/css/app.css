@@ -323,7 +323,7 @@ button {
 
 .jp {
   font-size: 1rem;
-  color: #c6c3ba;
+  color: #a49e90;
 }
 
 #property-show {
@@ -338,7 +338,8 @@ button {
 .facilities,
 .rooms,
 .location,
-.oparation {
+.oparation,
+.artical-info {
   border-bottom: #eeede8 3px solid;
   padding: 3rem 0;
 }
@@ -393,7 +394,7 @@ button {
   margin: 2em 0;
   padding: 0.5em 1em;
   border: solid 3px #eeede8;
-  border-radius: 8px;
+  border-radius: 9px;
 }
 
 .feature .info-title,
@@ -404,7 +405,7 @@ button {
   left: 30px;
   padding: 0 9px;
   line-height: 1;
-  color: #c6c3ba;
+  color: #a49e90;
   background: #FFF;
   font-weight: bold;
 }
@@ -450,7 +451,7 @@ button {
 
 .rooms .icon {
   font-size: 2.5rem;
-  color: #c6c3ba;
+  color: #a49e90;
 }
 
 .rooms .rooms-title {
@@ -475,7 +476,7 @@ button {
 }
 
 .rooms .total-room {
-  color: #c6c3ba;
+  color: #a49e90;
 }
 
 .rooms .index-room-table {
@@ -512,7 +513,7 @@ button {
 .location-title .station-walk .icon {
   font-size: 2rem;
   margin: 0 1rem;
-  color: #c6c3ba;
+  color: #a49e90;
 }
 
 .location-title .station-walk .station {
@@ -570,6 +571,27 @@ button {
 
 .oparation-list .icon {
   font-size: 3.5rem;
-  color: #c6c3ba;
+  color: #a49e90;
+}
+
+.artical-info {
+  text-align: center;
+}
+
+.artical-info .inquiry {
+  background-color: #F59A89;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 9px;
+}
+
+.artical-info .jump-to-top {
+  margin-top: 3rem;
+}
+
+.artical-info .jump-to-top a {
+  color: #a49e90;
+  text-decoration: none;
 }
 
