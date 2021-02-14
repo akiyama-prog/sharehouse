@@ -35,7 +35,7 @@
             </a>
             @if($property->feature1)
             <ul class='feature'>
-                <p class='featurue-title'>FEATURE</p>
+                <p class='info-title'>FEATURE</p>
                 <li>{{ $property->feature1 }}</li>
                 @if($property->feature2)<li>{{ $property->feature2 }}</li>@endif
                 @if($property->feature3)<li>{{ $property->feature3 }}</li>@endif
@@ -169,6 +169,12 @@
             </div>
             @endif
         </div>
+        <ul class='area-info'>
+            <p class='info-title'>周辺施設</p>
+            <li>{{ $property->area_info1 }}</br><span class='area-info-walk'>徒歩{{ $property->area_info_walk1 }}分</span></li>
+            @if($property->area_info2)<li>{{ $property->area_info2 }}</br><span class='area-info-walk'>徒歩{{ $property->area_info_walk2 }}分</span></li>@endif
+            @if($property->area_info3)<li>{{ $property->area_info3 }}</br><span class='area-info-walk'>徒歩{{ $property->area_info_walk3 }}分</span></li>@endif
+        </ul>
     </div>
 
 </div>

@@ -312,6 +312,29 @@ header{
 .oparation-color{
     color: #B6B97E;
 }
+.feature ,.area-info{
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px $show-border-color;
+    border-radius: 8px;
+    .info-title{
+        position: absolute;
+        display: inline-block;
+        top: -10px;
+        left: 30px;
+        padding: 0 9px;
+        line-height: 1;
+        color:$show-main-color;
+        background: #FFF;
+        font-weight: bold;
+    }
+    li{
+        margin: 1rem 2rem;
+        padding: 0 ;
+    }
+}
+
 //共用部
 .facilities{
     .facilities-title{
@@ -319,26 +342,6 @@ header{
         justify-content: space-between;
         .feature{
             width: 60%;
-            position: relative;
-            margin: 2em 0;
-            padding: 0.5em 1em;
-            border: solid 3px $show-border-color;
-            border-radius: 8px;
-            li{
-                margin: 1rem 2rem;
-                padding: 0 ;
-            }
-        }
-        .featurue-title{
-            position: absolute;
-            display: inline-block;
-            top: -13px;
-            left: 30px;
-            padding: 0 9px;
-            line-height: 1;
-            color:$show-main-color;
-            background: #FFF;
-            font-weight: bold;
         }
     }
     .facilities-info{
@@ -432,6 +435,18 @@ header{
                 color:  #E6A798;
                 font-size: 1.5rem;
             }
+        }
+    }
+}
+.area-info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    li{
+        font-weight: bold;
+        .area-info-walk{
+            font-size: .8rem;
         }
     }
 }

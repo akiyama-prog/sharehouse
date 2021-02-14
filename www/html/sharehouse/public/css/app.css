@@ -386,13 +386,8 @@ button {
   color: #B6B97E;
 }
 
-.facilities .facilities-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.facilities .facilities-title .feature {
-  width: 60%;
+.feature,
+.area-info {
   position: relative;
   margin: 2em 0;
   padding: 0.5em 1em;
@@ -400,21 +395,32 @@ button {
   border-radius: 8px;
 }
 
-.facilities .facilities-title .feature li {
-  margin: 1rem 2rem;
-  padding: 0;
-}
-
-.facilities .facilities-title .featurue-title {
+.feature .info-title,
+.area-info .info-title {
   position: absolute;
   display: inline-block;
-  top: -13px;
+  top: -10px;
   left: 30px;
   padding: 0 9px;
   line-height: 1;
   color: #c6c3ba;
   background: #FFF;
   font-weight: bold;
+}
+
+.feature li,
+.area-info li {
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+.facilities .facilities-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facilities .facilities-title .feature {
+  width: 60%;
 }
 
 .facilities .facilities-info {
@@ -529,5 +535,20 @@ button {
 .location-title .station-walk .walk_min .minutes {
   color: #E6A798;
   font-size: 1.5rem;
+}
+
+.area-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.area-info li {
+  font-weight: bold;
+}
+
+.area-info li .area-info-walk {
+  font-size: 0.8rem;
 }
 
