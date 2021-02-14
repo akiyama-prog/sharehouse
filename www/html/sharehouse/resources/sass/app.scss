@@ -3,6 +3,9 @@ $orange: #ffb32f;
 $red:#ff7275;
 $show-main-color:#a49e90;
 $show-border-color: #eeede8;
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 98%;
 }
@@ -470,6 +473,7 @@ header{
 //問合せ
 .artical-info{
     text-align: center;
+    font-weight: bold;
     .inquiry{
         background-color: #F59A89;
         color: white;
@@ -482,6 +486,7 @@ header{
         a{
             color: $show-main-color;
             text-decoration: none;
+            font-size: .8rem;
         }
     }
 }
