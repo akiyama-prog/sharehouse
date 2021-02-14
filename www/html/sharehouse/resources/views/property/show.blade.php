@@ -177,5 +177,24 @@
         </ul>
     </div>
 
+    <div class='oparation'>
+        <a id='oparation'>
+            <h2><span class='oparation-color'>O</span>PARATION</br><span class='jp'>運営管理</span></h2>
+        </a>
+        <div class='oparation-list'>
+            <div>
+                <i class="fas fa-broom icon"></i>
+                <p class='genre'>清掃</p>
+                <p>{{ $property->clean_style }}({{ $property->clean_frequency }})</p>
+            </div>
+            <div>
+                <i class="far fa-circle icon"></i><i class="fas fa-times-circle icon"></i>
+                <p class='genre'>ルール</p>
+                <p>{{ $property->rule1 }}。
+                    @if($property->rule2){{ $property->rule2}}。@endif
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

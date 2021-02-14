@@ -272,7 +272,7 @@ header{
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities, .rooms,.location{
+.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation{
     border-bottom:$show-border-color 3px solid;
     padding: 3rem 0;
 }
@@ -448,5 +448,22 @@ header{
         .area-info-walk{
             font-size: .8rem;
         }
+    }
+}
+//運営管理
+.oparation-list{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    .genre{
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    .capture{
+        font-size: .8rem;
+    }
+    .icon{
+        font-size: 3.5rem;
+        color: $show-main-color;
     }
 }
