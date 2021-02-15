@@ -36,8 +36,8 @@
             </div>
 
             <div class='access-btn'>
-                <button class='show-detail-btn'><a href="{{ route('show_property',$property) }}"><i class="fas fa-arrow-circle-right mr-1"></i>詳細をみる</a></button>
-                <button class='query-btn'><a href=""><i class="fas fa-envelope mr-1"></i>この物件に問い合わせる</a></button>
+                <a href="{{ route('show_property',$property) }}" class='show-detail-btn'><i class="fas fa-arrow-circle-right mr-1"></i>詳細をみる</a>
+                <a href="" class='query-btn'><i class="fas fa-envelope mr-1"></i>この物件に問い合わせる</a>
             </div>
         </div>
         @endforeach

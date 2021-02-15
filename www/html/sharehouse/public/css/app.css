@@ -103,18 +103,6 @@ header #logo img {
   font-size: 1.7rem;
 }
 
-.clear-button-css,
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .area-select {
   display: block;
   color: black;
@@ -327,13 +315,10 @@ button {
 
 #main_content .access-btn a {
   color: white;
-}
-
-#main_content .access-btn .show-detail-btn,
-#main_content .access-btn .query-btn {
   width: 48%;
   border-radius: 0.5rem;
   padding: 0.6rem;
+  text-align: center;
 }
 
 #main_content .access-btn .show-detail-btn {
