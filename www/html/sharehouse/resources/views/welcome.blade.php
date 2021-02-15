@@ -18,24 +18,38 @@
         </div>
         <div class='search'>
             <p>特徴で探す</p>
-            {!! Form::open(['route' => 'feature_search','method' => 'get']) !!}
             <ul class='feature-select'>
-                <li class='is-private-room'><i class="fas fa-person-booth icon-size"></i>　
-                    {!! Form::submit('個室あり',['class' => 'clear-button-css','name' => 'is_private_room']) !!}
-                </li>
-                <li class='is-domitory'><i class="fas fa-bed icon-size"></i>　
-                    {!! Form::submit('ドミトリーあり',['class' => 'clear-button-css','name' => 'is_dormitory']) !!}
-                </li>
-                <li class='is-women-only'><i class="fas fa-female icon-size"></i>　
-                    {!! Form::submit('女性のみ',['class' => 'clear-button-css','name' => 'is_women_only']) !!}</li>
-                <li class='is-foreigner'><i class="fas fa-plane icon-size"></i>　
-                    {!! Form::submit('外国人可',['class' => 'clear-button-css','name' => 'is_foreigner']) !!}</li>
-                <li class='is_vacancy'><i class="fas fa-sign-in-alt icon-size"></i>　
-                    {!! Form::submit('空室あり',['class' => 'clear-button-css','name' => 'is_vacancy']) !!}</li>
-                <li class='campaign'><i class="fas fa-glass-cheers icon-size"></i>　
-                    {!! Form::submit('キャンペーンあり',['class' => 'clear-button-css','name' => 'campaign']) !!}</li>
+                <a href="{{ route('feature_search','private_room') }}" class='is-private-room'>
+                    <li><i class="fas fa-person-booth icon-size"></i>　
+                        個室あり
+                    </li>
+                </a>
+                <a href="{{ route('feature_search','dormitory') }}" class='is-domitory'>
+                    <li><i class="fas fa-bed icon-size"></i>　
+                        ドミトリーあり
+                    </li>
+                </a>
+                <a href="{{ route('feature_search','women_only') }}" class='is-women-only'>
+                    <li><i class="fas fa-female icon-size"></i>　
+                        女性のみ
+                    </li>
+                </a>
+                <a href="{{ route('feature_search','foreigner') }}" class='is-foreigner'>
+                    <li><i class="fas fa-plane icon-size"></i>　
+                        外国人可
+                    </li>
+                </a>
+                <a href="{{ route('feature_search','vacancy') }}" class='is_vacancy'>
+                    <li><i class="fas fa-sign-in-alt icon-size"></i>　
+                        空室あり
+                    </li>
+                </a>
+                <a href="{{ route('feature_search','campaign') }}" class='campaign'>
+                    <li><i class="fas fa-glass-cheers icon-size"></i>　
+                        キャンペーンあり
+                    </li>
+                </a>
             </ul>
-            {!! Form::close() !!}
         </div>
     </div>
 </div>
