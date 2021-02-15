@@ -80,6 +80,16 @@ header{
         border-bottom: solid 6px white;
         border-radius: 9px;
         width: 100%;
+        p{
+            font-weight: bold;
+            letter-spacing: .2rem;
+            font-size: 1.2rem;
+            border-bottom: .3rem dotted $show-main-color;
+        }
+        .emphasis-letter{
+            color: tomato;
+            font-size: 1.7rem;
+        }
     }
 }
 .clear-button-css, button{

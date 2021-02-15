@@ -91,6 +91,18 @@ header #logo img {
   width: 100%;
 }
 
+.searches .search p {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  border-bottom: 0.3rem dotted #a49e90;
+}
+
+.searches .search .emphasis-letter {
+  color: tomato;
+  font-size: 1.7rem;
+}
+
 .clear-button-css,
 button {
   background-color: transparent;

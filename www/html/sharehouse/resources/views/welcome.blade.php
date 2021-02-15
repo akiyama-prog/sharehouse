@@ -7,7 +7,7 @@
     <h2 class='description'>東京23区のシェアハウスを探そう</h2>
     <div class='searches'>
         <div class='search'>
-            <p>エリアで探す</p>
+            <p><span class='emphasis-letter'>エ</span>リアで探す</p>
             <table class='table table-hover'>
                 @foreach($areas as $area)
                 <tr>
@@ -17,7 +17,7 @@
             </table>
         </div>
         <div class='search'>
-            <p>特徴で探す</p>
+            <p><span class='emphasis-letter'>特</span>徴で探す</p>
             <ul class='feature-select'>
                 <a href="{{ route('feature_search','private_room') }}" class='is-private-room'>
                     <li><i class="fas fa-person-booth icon-size"></i>　
