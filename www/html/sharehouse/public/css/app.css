@@ -103,6 +103,16 @@ button {
           appearance: none;
 }
 
+.area-select {
+  display: block;
+  color: black;
+}
+
+.area-select:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .feature-select {
   list-style: none;
   padding-left: 0;
@@ -110,14 +120,15 @@ button {
   flex-wrap: wrap;
 }
 
-.feature-select li {
+.feature-select a {
   padding: 1rem 3rem;
   padding-left: 0.5rem;
   margin: 0.5rem;
   width: 15rem;
+  text-decoration: none;
 }
 
-.feature-select li .icon-size {
+.feature-select a .icon-size {
   font-size: 1.3em;
 }
 
@@ -126,7 +137,7 @@ button {
   color: #6ecc6e;
 }
 
-.feature-select .is-private-room input[type=submit] {
+.feature-select .is-private-room a {
   color: #6ecc6e;
 }
 
@@ -136,7 +147,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .is-private-room:hover input[type=submit] {
+.feature-select .is-private-room:hover a {
   color: white;
 }
 
@@ -145,7 +156,7 @@ button {
   color: #6594eb;
 }
 
-.feature-select .is-domitory input[type=submit] {
+.feature-select .is-domitory a {
   color: #6594eb;
 }
 
@@ -155,7 +166,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .is-domitory:hover input[type=submit] {
+.feature-select .is-domitory:hover a {
   color: white;
 }
 
@@ -164,7 +175,7 @@ button {
   color: #ff7275;
 }
 
-.feature-select .is-women-only input[type=submit] {
+.feature-select .is-women-only a {
   color: #ff7275;
 }
 
@@ -174,7 +185,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .is-women-only:hover input[type=submit] {
+.feature-select .is-women-only:hover a {
   color: white;
 }
 
@@ -183,7 +194,7 @@ button {
   color: #ffb32f;
 }
 
-.feature-select .is-foreigner input[type=submit] {
+.feature-select .is-foreigner a {
   color: #ffb32f;
 }
 
@@ -193,7 +204,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .is-foreigner:hover input[type=submit] {
+.feature-select .is-foreigner:hover a {
   color: white;
 }
 
@@ -202,7 +213,7 @@ button {
   color: #77b5e7;
 }
 
-.feature-select .is_vacancy input[type=submit] {
+.feature-select .is_vacancy a {
   color: #77b5e7;
 }
 
@@ -212,7 +223,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .is_vacancy:hover input[type=submit] {
+.feature-select .is_vacancy:hover a {
   color: white;
 }
 
@@ -221,7 +232,7 @@ button {
   color: #9577e7;
 }
 
-.feature-select .campaign input[type=submit] {
+.feature-select .campaign a {
   color: #9577e7;
 }
 
@@ -231,7 +242,7 @@ button {
   transition: all 0.3s;
 }
 
-.feature-select .campaign:hover input[type=submit] {
+.feature-select .campaign:hover a {
   color: white;
 }
 

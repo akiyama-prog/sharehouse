@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Area;
 use App\Model\Property;
 use App\Model\Room;
+use phpDocumentor\Reflection\Types\Integer;
 
 class PropertyController extends Controller
 {
@@ -20,40 +21,39 @@ class PropertyController extends Controller
 
     /**
      * トップページからのエリア検索
-     * @param Illuminate\Http\Requests
+     * @param App\Model\Area $area
      * @return View
      */
-    public function areaSearch(Request $request)
+    public function areaSearch(Area $area)
     {
-        $area_id = Area::where('area_name', $request->area)->value('id');
-        $properties = Property::where('area_id', $area_id)->get();
-        $feature = $request->area;
+        $properties = Property::where('area_id', $area->id)->get();
+        $feature = $area->area_name;
         return view('property.search_result', compact('properties', 'feature'));
     }
 
     /**
      * トップページからの特徴検索
-     * @param Illuminate\Http\Requests
+     * @param string $feature
      * @return View
      */
-    public function featureSearch(Request $request)
+    public function featureSearch(string $feature)
     {
-        if ($request->is_private_room) {
+        if ($feature = 'private_room') {
             $properties = Property::where('is_private_room', true)->get();
             $feature = '個室あり';
-        } elseif ($request->is_dormitory) {
+        } elseif ($feature = 'dormitory') {
             $properties = Property::where('is_dormitory', true)->get();
             $feature = 'ドミトリーあり';
-        } elseif ($request->is_women_only) {
+        } elseif ($feature = 'women_only') {
             $properties = Property::where('is_women_only', true)->get();
             $feature = '女性専用';
-        } elseif ($request->is_foreigner) {
+        } elseif ($feature = 'foreigner') {
             $properties = Property::where('is_foreigner', true)->get();
             $feature = '外国人OK';
-        } elseif ($request->is_vacancy) {
+        } elseif ($feature = 'vacancy') {
             $properties = Property::where('is_vacancy', true)->get();
             $feature = '空室あり';
-        } elseif ($request->campaign) {
+        } elseif ($feature = 'campaign') {
             $properties = Property::whereNotNull('campaign')->get();
             $feature = 'キャンペーン中';
         }
