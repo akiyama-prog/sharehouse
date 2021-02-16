@@ -17,6 +17,14 @@ class Property extends Model
     }
 
     /**
+     * この物件のサブ写真を取得
+     */
+    public function room_pictures()
+    {
+        return $this->hasMany('App\Model\RoomPictures');
+    }
+
+    /**
      * この物件の部屋を取得
      */
     public function rooms()
