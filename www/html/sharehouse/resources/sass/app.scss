@@ -363,16 +363,16 @@ header{
         .images{
             width: 30%;
             flex-wrap: wrap;
-            .subpics{
-                margin-top: .5rem;
-                width: 95px;
-                height: 80px;
-            }
         }
         .facilities-info-table{
             width: 60%;
         }
     }
+}
+.subpics{
+    margin-top: .5rem;
+    width: 95px;
+    height: 80px;
 }
 //占有部
 .rooms{

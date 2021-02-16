@@ -140,6 +140,9 @@
             </tr>
             @endforeach
         </table>
+        @foreach($property->room_pictures as $picture)
+        <a href="/images/{{ $picture->image_name }}" data-lightbox="sub_pics"><img src="/images/{{ $picture->image_name }}" alt='部屋写真' class='subpics'></a>
+        @endforeach
         @else
         <p>現在空室の予定はございません。</p>
         @endif
