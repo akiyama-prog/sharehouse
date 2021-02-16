@@ -447,14 +447,14 @@ header #logo img {
   flex-wrap: wrap;
 }
 
-.facilities .facilities-info .images .subpics {
+.facilities .facilities-info .facilities-info-table {
+  width: 60%;
+}
+
+.subpics {
   margin-top: 0.5rem;
   width: 95px;
   height: 80px;
-}
-
-.facilities .facilities-info .facilities-info-table {
-  width: 60%;
 }
 
 .rooms {
