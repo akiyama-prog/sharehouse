@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             PropertySeeder::class,
             RoomsSeeder::class,
             SubPictureSeeder::class,
+            RoomPictureSeeder::class,
         ]);
     }
 }
