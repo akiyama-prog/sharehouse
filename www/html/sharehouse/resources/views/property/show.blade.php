@@ -10,7 +10,7 @@
     <div class='main-info'>
         <h1>{{ $property->property_name }}</h1>
         <div class='main-image'><img src="/images/{{ $property->main_image }}" alt="物件写真"></div>
-        <p class='introduce'>{{ nl2br($property->introduce) }}</p>
+        <p class='introduce'>{!! nl2br($property->introduce) !!}</p>
     </div>
 
     <ul class='inside-page-link'>
@@ -130,6 +130,7 @@
                 <th>広さ</th>
                 <th>賃料</th>
                 <th>その他の費用</th>
+                <th></th>
             </tr>
             @foreach($property->rooms as $room)
             <tr>
@@ -137,7 +138,27 @@
                 <td>{{ $room->room_size }}㎡<span class='jp'> {{ round($room->room_size / 1.62 ,1) }}畳</span></td>
                 <td>￥{{ $room->lent }}</td>
                 <td><span class='jp'>管理費</span> ￥{{ $room->management_fee }}<span class='jp'>　敷金・保証金</span> ￥{{ $room->security_deposit + $room->deposit }}</td>
+                <td><label for="trigger.{{$room->id}}" class="detail_button">詳細</label></td>
             </tr>
+            <!-- 部屋詳細モーダル -->
+            <div class="modal_wrap">
+                <input id="trigger.{{$room->id}}" type="checkbox">
+                <div class="modal_overlay">
+                    <label for="trigger.{{$room->id}}" class="modal_trigger"></label>
+                    <div class="modal_content">
+                        <label for="trigger.{{$room->id}}" class="close_button">✖️</label>
+                        <h3>{{ $property->property_name }} {{ $room->room_number }}号室</h3>
+                        <p><span class='room-category'>広さ</span>　{{ $room->room_size }}㎡<span class='jp'> {{ round($room->room_size / 1.62 ,1) }}畳</span></p>
+                        <p><span class='room-category'>家賃</span>　￥{{ $room->lent }}</p>
+                        <p><span class='room-category'>共益費・管理費</span>　￥{{ $room->management_fee }}</p>
+                        <p><span class='room-category'>敷金・保証金</span>　￥{{ $room->security_deposit + $room->deposit }}</p>
+                        <p><span class='room-category'>礼金</span>　￥{{ $room->key_money }}</p>
+                        <p><span class='room-category'>備品</span>　{{ $room->facility }}</p>
+                        <p><span class='room-category'>特記事項</span>　{{ $room->memo }}</p>
+                        <a href="/images/{{ $room->image }}" data-lightbox="sub_pics"><img src="/images/{{ $room->image }}" alt='部屋写真' width="300"></a>
+                    </div>
+                </div>
+            </div>
             @endforeach
         </table>
         @foreach($property->room_pictures as $picture)
