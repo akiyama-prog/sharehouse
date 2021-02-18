@@ -9,7 +9,7 @@
 <div id='property-show'>
     <div class='main-info'>
         <h1>{{ $property->property_name }}</h1>
-        <div class='main-image'><img src="/images/{{ $property->main_image }}" alt="物件写真"></div>
+        <img src="/images/{{ $property->main_image }}" alt="物件写真" class='main-image'>
         <p class='introduce'>{{ nl2br($property->introduce) }}</p>
     </div>
 

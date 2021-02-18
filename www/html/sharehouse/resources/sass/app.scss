@@ -290,6 +290,10 @@ header{
     padding: 3rem 0;
 }
 .main-info{
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
     h1, .main-image{
         text-align: center;
         margin: 3rem 0;

@@ -356,6 +356,11 @@ header #logo img {
   padding: 3rem 0;
 }
 
+.main-info .main-image {
+  width: 100%;
+  height: auto;
+}
+
 .main-info h1,
 .main-info .main-image {
   text-align: center;
