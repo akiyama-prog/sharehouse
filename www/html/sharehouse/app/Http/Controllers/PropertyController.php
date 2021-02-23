@@ -61,6 +61,18 @@ class PropertyController extends Controller
     }
 
     /**
+     * エリア詳細検索(区で検索)
+     * @param string $city
+     * @return view
+     */
+    public function detailAreaSearch(string $city)
+    {
+        $properties = Property::where('city', $city)->get();
+        $feature = $city;
+        return view('property.search_result', compact('properties', 'feature'));
+    }
+
+    /**
      * 物件詳細ページ
      * @param Property $property
      * @return View

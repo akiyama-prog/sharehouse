@@ -256,7 +256,7 @@ header #logo img {
 }
 
 #side_content {
-  width: 25%;
+  width: 28%;
 }
 
 #side_content .detail-search .acc {
@@ -295,6 +295,24 @@ header #logo img {
   padding: 10px 0;
   height: auto;
   opacity: 1;
+}
+
+#side_content .feature-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#side_content .feature-select a {
+  padding: 0.5rem 0.3rem;
+  margin: 0.5rem 0;
+  width: 48%;
+  text-decoration: none;
+  font-size: 0.6em;
+}
+
+#side_content .feature-select a .icon-size {
+  font-size: 1rem;
 }
 
 #main_content {

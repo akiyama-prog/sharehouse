@@ -214,7 +214,7 @@ header{
     justify-content: space-between;
 }
 #side_content{
-    width: 25%;
+    width: 28%;
     .detail-search{
         .acc{
             display: none;
@@ -246,6 +246,21 @@ header{
                     padding: 10px 0;
                     height: auto;
                     opacity: 1;
+            }
+        }
+    }
+    .feature-select{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a{
+            padding: .5rem 0.3rem;
+            margin: .5rem 0;
+            width: 48%;
+            text-decoration: none;
+            font-size: .6em;
+            .icon-size{
+                font-size: 1rem;
             }
         }
     }
