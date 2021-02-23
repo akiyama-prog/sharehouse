@@ -102,11 +102,12 @@ class PropertyController extends Controller
         } else {
             $properties = Property::whereNotNull('id');
         }
-        $request->session()->push('feature', $feature);
+        $jpFeature = $this->convertJPnSaveFeatureSession($feature);
+        $request->session()->push('feature', $jpFeature);
 
         if ($request->session()->has('feature')) {
-            foreach (session('feature') as $feature) {
-                $properties = $this->picPropertiesViaFeature($feature, $properties);
+            foreach (session('feature') as $jpFeature) {
+                $properties = $this->picPropertiesViaFeature($jpFeature, $properties);
             }
         }
         $properties = $properties->get();
@@ -129,28 +130,54 @@ class PropertyController extends Controller
     /**
      * 特徴検索
      */
-    protected function picPropertiesViaFeature($feature, $properties)
+    protected function picPropertiesViaFeature($jpFeature, $properties)
     {
-        switch ($feature) {
-            case 'private_room':
-                $properties = $properties->where('is_private_room', true);
+        switch ($jpFeature) {
+            case '個室あり':
+                return $properties->where('is_private_room', true);
                 break;
-            case 'dormitory':
+            case 'ドミトリーあり':
                 return $properties->where('is_dormitory', true);
                 break;
-            case 'women_only':
-                $properties = $properties->where('is_women_only', true);
+            case '女性のみ':
+                return $properties->where('is_women_only', true);
                 break;
-            case 'foreigner':
+            case '外国人可':
                 return $properties->where('is_foreigner', true);
                 break;
-            case 'vacancy':
+            case '空室あり':
                 return $properties->where('is_vacancy', true);
                 break;
-            case 'campaign':
+            case 'キャンペーンあり':
                 return $properties->whereNotNull('campaign');
                 break;
         }
-        return $properties;
+    }
+
+    /**
+     * 特徴を日本語にしてセッションに保存
+     */
+    protected function convertJPnSaveFeatureSession($feature)
+    {
+        switch ($feature) {
+            case 'private_room':
+                return '個室あり';
+                break;
+            case 'dormitory':
+                return 'ドミトリーあり';
+                break;
+            case 'women_only':
+                return '女性のみ';
+                break;
+            case 'foreigner':
+                return '外国人可';
+                break;
+            case 'vacancy':
+                return '空室あり';
+                break;
+            case 'campaign':
+                return 'キャンペーンあり';
+                break;
+        }
     }
 }
