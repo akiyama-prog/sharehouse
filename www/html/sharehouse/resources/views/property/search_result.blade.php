@@ -21,32 +21,32 @@
         </div>
         <p>特徴で絞り込む</p>
         <ul class='feature-select'>
-            <a href="{{ route('feature_search','private_room') }}" class='is-private-room'>
+            <a href="{{ route('detail_feature_search','private_room') }}" class='is-private-room'>
                 <li><i class="fas fa-person-booth icon-size"></i>　
                     個室あり
                 </li>
             </a>
-            <a href="{{ route('feature_search','dormitory') }}" class='is-domitory'>
+            <a href="{{ route('detail_feature_search','dormitory') }}" class='is-domitory'>
                 <li><i class="fas fa-bed icon-size"></i>　
                     ドミトリーあり
                 </li>
             </a>
-            <a href="{{ route('feature_search','women_only') }}" class='is-women-only'>
+            <a href="{{ route('detail_feature_search','women_only') }}" class='is-women-only'>
                 <li><i class="fas fa-female icon-size"></i>　
                     女性のみ
                 </li>
             </a>
-            <a href="{{ route('feature_search','foreigner') }}" class='is-foreigner'>
+            <a href="{{ route('detail_feature_search','foreigner') }}" class='is-foreigner'>
                 <li><i class="fas fa-plane icon-size"></i>　
                     外国人可
                 </li>
             </a>
-            <a href="{{ route('feature_search','vacancy') }}" class='is_vacancy'>
+            <a href="{{ route('detail_feature_search','vacancy') }}" class='is_vacancy'>
                 <li><i class="fas fa-sign-in-alt icon-size"></i>　
                     空室あり
                 </li>
             </a>
-            <a href="{{ route('feature_search','campaign') }}" class='campaign'>
+            <a href="{{ route('detail_feature_search','campaign') }}" class='campaign'>
                 <li><i class="fas fa-glass-cheers icon-size"></i>　
                     キャンペーンあり
                 </li>
