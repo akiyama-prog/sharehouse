@@ -5,6 +5,18 @@
     <aside id='side_content'>
         <div class='detail-search'>
             <p>エリアで絞り込む</p>
+            @foreach(App\Model\Area::all() as $area)
+            <ul class='area-table'>
+                <input type="checkbox" id="area-{{$area->id}}" class='acc' />
+                <label for="area-{{$area->id}}">{{ $area->area_name }}</label>
+                @foreach(explode(',',$area->cities) as $city)
+                <li class='acc-hidden'>
+                    <a href="{{ route('area_search',$area->id) }}" class='area-select'>{{ $city }}</a>
+                </li>
+                @endforeach
+            </ul>
+            @endforeach
+
         </div>
         <div class='detail-search'>
             <p>特徴で絞り込む</p>
