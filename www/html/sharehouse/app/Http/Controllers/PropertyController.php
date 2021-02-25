@@ -94,7 +94,6 @@ class PropertyController extends Controller
         return view('property.search_result', compact('properties', 'feature', 'area_name'));
     }
 
-
     /**
      * 特徴詳細検索
      * @param string $feature
@@ -112,7 +111,14 @@ class PropertyController extends Controller
             $area_name = null;
         }
         $jpFeature = $this->convertJPnSaveFeatureSession($feature);
-        $request->session()->push('feature', $jpFeature);
+        //すでにセッションに追加ずみなら重複保存させない
+        if ($request->session()->has('feature')) {
+            if (!(in_array($jpFeature, session('feature')))) {
+                $request->session()->push('feature', $jpFeature);
+            }
+        } else {
+            $request->session()->push('feature', $jpFeature);
+        }
 
         if ($request->session()->has('feature')) {
             foreach (session('feature') as $jpFeature) {
