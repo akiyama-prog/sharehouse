@@ -54,7 +54,13 @@
         </ul>
     </aside>
     <article id='main_content'>
-        <h2 class='search-title'>{{ $feature }}のシェアハウス</h2>
+        <h2 class='search-title'>
+            @if($area_name && $feature === null) {{ $area_name }}
+            @elseif($feature && $area_name === null) {{ $feature }}
+            @elseif($area_name && $feature) {{ $area_name }}/{{ $feature }}
+            @endif
+            のシェアハウス
+        </h2>
         @foreach($properties as $property)
         <div class='property'>
             <h3 class='property-name'>{{ $property->property_name }}</h3>

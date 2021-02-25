@@ -30,8 +30,9 @@ class PropertyController extends Controller
     public function areaSearch(Area $area)
     {
         $properties = Property::where('area_id', $area->id)->get();
-        $feature = $area->area_name;
-        return view('property.search_result', compact('properties', 'feature'));
+        $area_name = $area->area_name;
+        $feature = null;
+        return view('property.search_result', compact('properties', 'area_name', 'feature'));
     }
 
     /**
@@ -67,7 +68,8 @@ class PropertyController extends Controller
                 $feature = 'キャンペーン中';
                 break;
         }
-        return view('property.search_result', compact('properties', 'feature'));
+        $area_name = null;
+        return view('property.search_result', compact('properties', 'feature', 'area_name'));
     }
 
     /**
@@ -83,8 +85,13 @@ class PropertyController extends Controller
         }
         session(['city' => $city]);
         $properties = Property::where('city', $city)->get();
-        $feature = $city;
-        return view('property.search_result', compact('properties', 'feature'));
+        if ($request->session()->has('feature')) {
+            $feature = implode('/', session('feature'));
+        } else {
+            $feature = null;
+        }
+        $area_name = $city;
+        return view('property.search_result', compact('properties', 'feature', 'area_name'));
     }
 
 
@@ -99,8 +106,10 @@ class PropertyController extends Controller
         //エリア検索されていたらそのエリア内で特徴検索を行う
         if ($request->session()->has('city')) {
             $properties = Property::where('city', session('city'));
+            $area_name = session('city');
         } else {
             $properties = Property::whereNotNull('id');
+            $area_name = null;
         }
         $jpFeature = $this->convertJPnSaveFeatureSession($feature);
         $request->session()->push('feature', $jpFeature);
@@ -112,8 +121,7 @@ class PropertyController extends Controller
         }
         $properties = $properties->get();
         $feature = implode('/', session('feature'));
-
-        return view('property.search_result', compact('properties', 'feature'));
+        return view('property.search_result', compact('properties', 'feature', 'area_name'));
     }
 
     /**
