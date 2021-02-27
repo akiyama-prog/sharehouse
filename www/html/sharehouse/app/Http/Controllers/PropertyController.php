@@ -113,13 +113,26 @@ class PropertyController extends Controller
         $jpFeature = $this->convertJPnSaveFeatureSession($feature);
         //すでにセッションに追加ずみなら重複保存させない
         if ($request->session()->has('feature')) {
+            if ($jpFeature === '個室あり') {
+                foreach (session('feature') as $index => $feature) {
+                    if ($feature === 'ドミトリーあり') {
+                        $request->session()->forget('feature.' . $index);
+                    }
+                }
+            } elseif ($jpFeature === 'ドミトリーあり') {
+                foreach (session('feature') as $index => $feature) {
+                    if ($feature === '個室あり') {
+                        $request->session()->forget('feature.' . $index);
+                    }
+                }
+            }
             if (!(in_array($jpFeature, session('feature')))) {
                 $request->session()->push('feature', $jpFeature);
             }
         } else {
             $request->session()->push('feature', $jpFeature);
         }
-
+        //特徴に当てはまる物件を抽出
         if ($request->session()->has('feature')) {
             foreach (session('feature') as $jpFeature) {
                 $properties = $this->picPropertiesViaFeature($jpFeature, $properties);
