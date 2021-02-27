@@ -4,7 +4,7 @@
 <div id='main-area'>
     <aside id='side_content'>
         <div class='detail-search'>
-            <p>エリアで絞り込む</p>
+            <p class='key-word'>エリアで絞り込む</p>
             @foreach(App\Model\Area::all() as $area)
             <ul class='area-table'>
 
@@ -19,39 +19,41 @@
             @endforeach
 
         </div>
-        <p>特徴で絞り込む</p>
-        <ul class='feature-select'>
-            <a href="{{ route('detail_feature_search','private_room') }}" class='is-private-room'>
-                <li><i class="fas fa-person-booth icon-size"></i>　
-                    個室あり
-                </li>
-            </a>
-            <a href="{{ route('detail_feature_search','dormitory') }}" class='is-domitory'>
-                <li><i class="fas fa-bed icon-size"></i>　
-                    ドミトリーあり
-                </li>
-            </a>
-            <a href="{{ route('detail_feature_search','women_only') }}" class='is-women-only'>
-                <li><i class="fas fa-female icon-size"></i>　
-                    女性のみ
-                </li>
-            </a>
-            <a href="{{ route('detail_feature_search','foreigner') }}" class='is-foreigner'>
-                <li><i class="fas fa-plane icon-size"></i>　
-                    外国人可
-                </li>
-            </a>
-            <a href="{{ route('detail_feature_search','vacancy') }}" class='is_vacancy'>
-                <li><i class="fas fa-sign-in-alt icon-size"></i>　
-                    空室あり
-                </li>
-            </a>
-            <a href="{{ route('detail_feature_search','campaign') }}" class='campaign'>
-                <li><i class="fas fa-glass-cheers icon-size"></i>　
-                    キャンペーンあり
-                </li>
-            </a>
-        </ul>
+        <div class='area-search'>
+            <p class='key-word'>特徴で絞り込む</p>
+            <ul class='feature-select'>
+                <a href="{{ route('detail_feature_search','private_room') }}" class='is-private-room'>
+                    <li><i class="fas fa-person-booth icon-size"></i>　
+                        個室あり
+                    </li>
+                </a>
+                <a href="{{ route('detail_feature_search','dormitory') }}" class='is-domitory'>
+                    <li><i class="fas fa-bed icon-size"></i>　
+                        ドミトリーあり
+                    </li>
+                </a>
+                <a href="{{ route('detail_feature_search','women_only') }}" class='is-women-only'>
+                    <li><i class="fas fa-female icon-size"></i>　
+                        女性のみ
+                    </li>
+                </a>
+                <a href="{{ route('detail_feature_search','foreigner') }}" class='is-foreigner'>
+                    <li><i class="fas fa-plane icon-size"></i>　
+                        外国人可
+                    </li>
+                </a>
+                <a href="{{ route('detail_feature_search','vacancy') }}" class='is_vacancy'>
+                    <li><i class="fas fa-sign-in-alt icon-size"></i>　
+                        空室あり
+                    </li>
+                </a>
+                <a href="{{ route('detail_feature_search','campaign') }}" class='campaign'>
+                    <li><i class="fas fa-glass-cheers icon-size"></i>　
+                        キャンペーンあり
+                    </li>
+                </a>
+            </ul>
+        </div>
     </aside>
     <article id='main_content'>
         <h2 class='search-title'>

@@ -259,6 +259,11 @@ header #logo img {
   width: 28%;
 }
 
+#side_content .key-word {
+  font-weight: bold;
+  border-bottom: solid 2px #856d53;
+}
+
 #side_content .detail-search .acc {
   display: none;
 }
@@ -297,13 +302,17 @@ header #logo img {
   opacity: 1;
 }
 
-#side_content .feature-select {
+#side_content .area-search .key-word {
+  margin-top: 2rem;
+}
+
+#side_content .area-search .feature-select {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#side_content .feature-select a {
+#side_content .area-search .feature-select a {
   padding: 0.5rem 0.3rem;
   margin: 0.5rem 0;
   width: 48%;
@@ -311,7 +320,7 @@ header #logo img {
   font-size: 0.6em;
 }
 
-#side_content .feature-select a .icon-size {
+#side_content .area-search .feature-select a .icon-size {
   font-size: 1rem;
 }
 

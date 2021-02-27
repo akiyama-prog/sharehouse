@@ -215,6 +215,10 @@ header{
 }
 #side_content{
     width: 28%;
+    .key-word{
+        font-weight: bold;
+        border-bottom: solid 2px #856d53;
+    }
     .detail-search{
         .acc{
             display: none;
@@ -249,18 +253,23 @@ header{
             }
         }
     }
-    .feature-select{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        a{
-            padding: .5rem 0.3rem;
-            margin: .5rem 0;
-            width: 48%;
-            text-decoration: none;
-            font-size: .6em;
-            .icon-size{
-                font-size: 1rem;
+    .area-search{
+        .key-word{
+            margin-top: 2rem;
+        }
+        .feature-select{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a{
+                padding: .5rem 0.3rem;
+                margin: .5rem 0;
+                width: 48%;
+                text-decoration: none;
+                font-size: .6em;
+                .icon-size{
+                    font-size: 1rem;
+                }
             }
         }
     }
