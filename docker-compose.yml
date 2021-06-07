@@ -14,6 +14,19 @@ services:
     volumes:
      - ./docker/db:/var/lib/postgresql
      - ./docker/db:/docker-entrypoint-initdb.d
+  db-test:
+    image: postgres:12.3
+    container_name: db-test
+    environment:
+      TZ: 'Asia/Tokyo'
+      POSTGRES_USER: 'akinayamada'
+      POSTGRES_PASSWORD: 'sharehouse'
+      POSTGRES_DB: 'sharehouse'
+    ports:
+     - 5000:5432
+    volumes:
+     - ./docker/db-test:/var/lib/postgresql
+     - ./docker/db-test:/docker-entrypoint-initdb.d
 
   php:
     build:
